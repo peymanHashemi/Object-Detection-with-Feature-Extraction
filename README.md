@@ -109,9 +109,9 @@ I used Selective Search to generate candidate regions (Region of Interest or ROI
 Selective Search hierarchically groups similar regions in the image based on texture, color, and size, providing fewer but more meaningful region proposals compared to sliding windows.
 The generated proposals were rectangles with varying scales, ensuring coverage of potential object locations in the image.
 
-<img style="width:240px" src="https://github.com/user-attachments/assets/0958413a-d2b7-4b8e-97f0-5c4ad31e3cd1">
+<img style="width:225px" src="https://github.com/user-attachments/assets/0958413a-d2b7-4b8e-97f0-5c4ad31e3cd1">
 <img style="width:200px" src="https://github.com/user-attachments/assets/fb4c6006-6dc0-4463-9002-1a5a7afd76be">
-<img style="width:220px" src="https://github.com/user-attachments/assets/0bb81a6b-c0e1-4630-a55f-66b9317e0e1c">
+<img style="width:210px" src="https://github.com/user-attachments/assets/0bb81a6b-c0e1-4630-a55f-66b9317e0e1c">
 
 ### Feature Extraction with LBP
 
@@ -120,7 +120,7 @@ The LBP descriptor converts each region into a fixed-length feature vector by co
 To handle varying sizes of regions, I ensured that all LBP histograms were normalized and of consistent length, allowing for direct comparison across regions.
 
 <img style="width:450px" src="https://github.com/user-attachments/assets/d26b64da-3976-4efb-ab18-db94d77e88fc">
-<img style="width:380px" src="https://github.com/user-attachments/assets/b733b94c-06f4-4131-9e9b-980367cf187c">
+<img style="width:350px" src="https://github.com/user-attachments/assets/b733b94c-06f4-4131-9e9b-980367cf187c">
 
 ### Training the Classifier
 
