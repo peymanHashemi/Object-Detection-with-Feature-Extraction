@@ -25,7 +25,7 @@ Understand the role of NMS in eliminating redundant detections during post-proce
 (Note: No implementation is required for this step.)
 
 ## Dataset and Guideline Overview
-The dataset provided contains approximately 200 images from the popular game Counter-Strike, labeled in the YOLO format. The dataset and the necessary scripts for reading and preparing the data are included.
+The dataset provided contains approximately 200 images from the popular game Counter-Strike ([Counter-Strike Dataset](https://www.kaggle.com/datasets/lstmkirigaya/cstrike-detection)), labeled in the YOLO format. The dataset and the necessary scripts for reading and preparing the data are included.
 
 The project follows a two-stage object detection framework, one of the earliest and most effective approaches. The steps are as follows:
 
