@@ -100,16 +100,18 @@ To address this, I considered aggregating the keypoint descriptors or using pool
 
 
 ### Task 3: Completing Code and Training the Classifier
+
 ### Step-by-Step Breakdown
+
 ### Region Proposal Generation (Selective Search)
 
 I used Selective Search to generate candidate regions (Region of Interest or ROIs) in the input images.
 Selective Search hierarchically groups similar regions in the image based on texture, color, and size, providing fewer but more meaningful region proposals compared to sliding windows.
 The generated proposals were rectangles with varying scales, ensuring coverage of potential object locations in the image.
 
-<img style="width:400px" src="https://github.com/user-attachments/assets/0958413a-d2b7-4b8e-97f0-5c4ad31e3cd1">
-<img style="width:400px" src="https://github.com/user-attachments/assets/fb4c6006-6dc0-4463-9002-1a5a7afd76be">
-<img style="width:400px" src="https://github.com/user-attachments/assets/0bb81a6b-c0e1-4630-a55f-66b9317e0e1c">
+<img style="width:200px" src="https://github.com/user-attachments/assets/0958413a-d2b7-4b8e-97f0-5c4ad31e3cd1">
+<img style="width:200px" src="https://github.com/user-attachments/assets/fb4c6006-6dc0-4463-9002-1a5a7afd76be">
+<img style="width:200px" src="https://github.com/user-attachments/assets/0bb81a6b-c0e1-4630-a55f-66b9317e0e1c">
 
 ### Feature Extraction with LBP
 
@@ -118,7 +120,7 @@ The LBP descriptor converts each region into a fixed-length feature vector by co
 To handle varying sizes of regions, I ensured that all LBP histograms were normalized and of consistent length, allowing for direct comparison across regions.
 
 <img style="width:400px" src="https://github.com/user-attachments/assets/d26b64da-3976-4efb-ab18-db94d77e88fc">
-<img style="width:400px" src=https://github.com/user-attachments/assets/b733b94c-06f4-4131-9e9b-980367cf187c">
+<img style="width:400px" src="https://github.com/user-attachments/assets/b733b94c-06f4-4131-9e9b-980367cf187c">
 
 ### Training the Classifier
 
@@ -146,10 +148,10 @@ Results showed that LBP was effective in distinguishing objects based on texture
 Using additional features like color histograms and HoG improved classification results.
 
 ### Results:
-<img style="width:400px" src="https://github.com/user-attachments/assets/e3b097fd-c932-46f6-ac92-13aa5e28bcf7"> <br>
-<img style="width:400px" src="https://github.com/user-attachments/assets/a07ab57a-6909-4c86-a03d-3b6c5ff6624f"> <br>
-<img style="width:400px" src="https://github.com/user-attachments/assets/ac246af7-db0d-4669-bbc5-8dd9f9dd93f3"> <br>
-<img style="width:400px" src="https://github.com/user-attachments/assets/d467fa6b-f85e-4d13-993c-d43955e0b899"> 
+<img style="width:500px" src="https://github.com/user-attachments/assets/e3b097fd-c932-46f6-ac92-13aa5e28bcf7"> <br>
+<img style="width:500px" src="https://github.com/user-attachments/assets/a07ab57a-6909-4c86-a03d-3b6c5ff6624f"> <br>
+<img style="width:500px" src="https://github.com/user-attachments/assets/ac246af7-db0d-4669-bbc5-8dd9f9dd93f3"> <br>
+<img style="width:500px" src="https://github.com/user-attachments/assets/d467fa6b-f85e-4d13-993c-d43955e0b899"> 
 
 ### Task 4 (Bonus): Adding a Regression Model
 I incorporated a regression model to refine object localization, inspired by the RCNN framework. The regression model predicted bounding box offsets to adjust the proposed regions, improving localization accuracy. Despite implementing this, the R² score was low, indicating that LBP features alone were insufficient for precise localization adjustments.
